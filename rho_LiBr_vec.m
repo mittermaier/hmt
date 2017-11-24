@@ -1,5 +1,4 @@
 function ausgabe=rho_LiBr_vec(T,xi)
-
 % T                        temperature            	C (Celcius)
 %                                                	[ ... ]
 % xi                       mass fraction         	kg LiBr/kg solution 
@@ -10,14 +9,14 @@ function ausgabe=rho_LiBr_vec(T,xi)
 % solution. Input parameters are: temperature and mass fraction of LiBr
 %
 % The calculation is based on data from the PHD thesis: 
-% L�wer, Harald 
-% Thermodynamische und physikalische Eigenschaften der w�ssrigen Lithiumbromid-L�sung Karlsruhe
+% Löwer, Harald 
+% Thermodynamische und physikalische Eigenschaften der wässrigen Lithiumbromid-Lösung Karlsruhe
 % 1960
 
 % The regression alaysis was conducted in 2009 during a PHD study by:
 % Wohlfeil, Arnold
-% W�rme- und Stoff�bertragung bei der Absorption an Rieselfilmen in Absorptionsk�lteanlagen
-% Technische Universit�t Berlin
+% Wärme- und Stoffübertragung bei der Absorption an Rieselfilmen in Absorptionskälteanlagen
+% Technische Universität Berlin
 % 2009
 
 % Change log 
@@ -43,3 +42,29 @@ a15=-0.00239635;
 a16=2093.332625;
 ausgabe=a0+a1*xi+a2*T+a3*xi.*T+a4*xi.^2+a5*T.^2+a6*xi.^2.*T+a7*xi.*T.^2+a8*xi.^2.*T.^2+a9*xi.^3+a10*T.^3+a11*xi.^3.*T+a12*xi.^3.*T.^2+a13*xi.*T.^3+a14*xi.^2.*T.^3+a15*xi.^3.*T.^3+a16*xi.^4;
 
+%Copyright 2017 Martin Mittermaier
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%
+%    Dieses Programm ist Freie Software: Sie können es unter den Bedingungen
+%    der GNU General Public License, wie von der Free Software Foundation,
+%    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder neueren
+%    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+%
+%    Dieses Programm wird in der Hoffnung, dass es nützlich sein wird, aber
+%    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+%    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+%    Siehe die GNU General Public License für weitere Details.
+%
+%    Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
+%    Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
