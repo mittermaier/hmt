@@ -1,8 +1,20 @@
 hmt
 ===
 
-Please note that the related scientific paper is currently being reviewed. 
-The source code will be available here once the review process is finished. 
+Dear reader,
+please note that the files you will find in this repository are the basis for a published article.
+The theoretical background and mathematical equations are described in this article. 
+Please read the article first. 
+
+The files you will find here are free software under the terms of the GNU General Public License.
+
+Please cite this article as:
+    Mittermaier, M. & Ziegler, F. Heat Mass Transfer (2017). https://doi.org/10.1007/s00231-017-2219-9
+
+    DOI https://doi.org/10.1007/s00231-017-2219-9 
+    Publisher Name Springer Berlin Heidelberg 
+    Print ISSN 0947-7411 
+    Online ISSN 1432-1181 
 
 Thank you for your understanding. 
 
