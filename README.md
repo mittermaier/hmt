@@ -13,8 +13,7 @@ Please cite this article as:
     The impact of viscosity on the combined heat, mass and momentum transfer in laminar liquid falling films 
     Mittermaier, M. & Ziegler, F. Heat Mass Transfer (2017) 
     https://doi.org/10.1007/s00231-017-2219-9
-    
-    
+        
     Publisher Name Springer Berlin Heidelberg 
     Print ISSN 0947-7411 
     Online ISSN 1432-1181 
