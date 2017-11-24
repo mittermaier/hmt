@@ -23,6 +23,7 @@ function aus = Filmdicke_hilf(delta99,nu,u_0,g,x)
 
 aus=delta99-5*(nu*x/(2*g*x+u_0^2)^0.5)^0.5;
 
+%Copyright 2017 Martin Mittermaier
 %    This program is free software: you can redistribute it and/or modify
 %    it under the terms of the GNU General Public License as published by
 %    the Free Software Foundation, either version 3 of the License, or
