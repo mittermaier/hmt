@@ -7,7 +7,11 @@
 %from Martin Mittermaier and Felix Ziegler in 2017
 %DOI 10.1007/s00231-017-2219-9
 
-%The program is made for open usage. Please cite the publication as soon as your work is based on this program.
+%The program is free software under the terms of the GNU General Public License as published by 
+%the Free Software Foundation, either version 3 of the License, or
+%(at your option) any later version.
+
+%Please cite the publication as soon as your work is based on this program or the above mentioned article.
 %Contact: mittermaier.martin@gmail.com
 
 %Assumptions:
@@ -50,7 +54,7 @@ p=1500; %pressure in [Pa]
 %fraction and use saturation conditions
 w0=0.5; %initial mass fraction in [kg H2O/kg solution] used later to determine the saturation temperature 
 %w0 = 1-Xi_Siede(T0-273.15,p); %for use with above set temperature to compute the correspondig mass fraction. 
-% XiSiede expects input temperatur in [�C] and pressure in [Pa] and returns the mass fraction of LiBr-salt in [kg LiBr /kg solution].
+% XiSiede expects input temperatur in [°C] and pressure in [Pa] and returns the mass fraction of LiBr-salt in [kg LiBr /kg solution].
 % Since the water mass fraction is used throughout the entire program the
 % value Xi_Siede is substracted from 1.
 
@@ -59,7 +63,7 @@ T0=T_Siede(1-w0,p)+273.15 + 3; %'T_Siede' calls the function for saturation temp
 
 Tw=T_Siede(1-w0,p)+273.15 - 6; %wall temperature in [K] (constant over flow length), here 6 K below saturation temperature 'T_Siede'
 
-alpha = 90; %angle of the plate, 90� corresponds to vertical plate
+alpha = 90; %angle of the plate, 90° corresponds to vertical plate
 g = 9.80665*sin((alpha/90)*pi/2); % resulting acceleration of gravity in [m^2/s]
 
 %LONGITUDINAL GRID:
@@ -134,8 +138,8 @@ w(1,1:y_number)=repmat(w0,1,y_number);%constant mass fraction w0 at the inlet (e
 w(1,y_number+1)=1-Xi_Siede(T0-273.15,p);%at the interface
 
 %saturation (corresponding to the inlet temperature) is assumed at the interface 
-%Xi_Siede is a function based on data collected by Harald L�wer (1960), an a regression analysis conducted by Arnold Wohlfeil (2009)
-%Inputs are temperature in �C and pressure in Pa 
+%Xi_Siede is a function based on data collected by Harald Löwer (1960), an a regression analysis conducted by Arnold Wohlfeil (2009)
+%Inputs are temperature in °C and pressure in Pa 
 %Output is the saturation mass fraction of LiBr in kg SALT/kg SOLUTION 
 
 %The properties are computed for each grid point
@@ -160,8 +164,8 @@ Diff(1,1:y_number+1)=d_vec(T(1,:)-273.15,1-w(1,:));
 habs(1,1)=1000*absorptionsenthalpie2_PK(T(1,y_number+1),1-w(1,y_number+1));
 
 %The functions eta_LiBr_vec, rho_LiBr_vec, cp_LiBr_vec, lambda_LiBr_vec
-%are based on data collected by Harald L�wer (1960), an a regression analysis conducted by Arnold Wohlfeil (2009)
-%Inputs ar temperature in �C LiBr mass fraction in kg SALT/kg SOLUTION
+%are based on data collected by Harald Löwer (1960), an a regression analysis conducted by Arnold Wohlfeil (2009)
+%Inputs ar temperature in °C LiBr mass fraction in kg SALT/kg SOLUTION
 
 %The Function enthalpySatLiqTH2OLiBr_PK is a property function for the enthalpy of the aqueous solution based on 
 %Patek und Klomfar (2006)
@@ -888,3 +892,30 @@ q=1;%Counter of temperature and mass fraction loop based on Newton's method (sta
     display(['Step# ',num2str(n),'--- longitudinal step size dx:',num2str(dx(n-1,1)),'  ---- current x-coordinate: ',num2str(A_3(n))]); 
     n=n+1;%counter of loop over flow lenght L
 end
+
+%Copyright 2017 Martin Mittermaier
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%
+%    Dieses Programm ist Freie Software: Sie können es unter den Bedingungen
+%    der GNU General Public License, wie von der Free Software Foundation,
+%    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder neueren
+%    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+%
+%    Dieses Programm wird in der Hoffnung, dass es nützlich sein wird, aber
+%    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+%    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+%    Siehe die GNU General Public License für weitere Details.
+%
+%    Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
+%    Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
