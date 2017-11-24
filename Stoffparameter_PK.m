@@ -1,7 +1,7 @@
 %  This M-file contains the coefficients for calculating the thermodynamical properties 
 %  of LiBr-H2O solutions from 273 to 500 K over full composition range
 %
-%  Quelle: J. Patek & J. Klomfar, A computationally effective formulation 
+%  Source: J. Patek & J. Klomfar, A computationally effective formulation 
 %          of the thermodynamic properties of LiBr-H2O solutions from 
 %          273 to 500 K over full composition range. To be published in IJR
 
@@ -9,8 +9,8 @@
 % Critical point of pure water
 TCritW          = 647.096;          % K
 pCritW          = 22.064*10^6;      % Pa
-densCritW       = 322 ;             % kg/m�
-densCritWmol    = 17873.727 ;       % mol*m�
+densCritW       = 322 ;             % kg/m³
+densCritWmol    = 17873.727 ;       % mol*m³
 cpCritWmol      = 76.0226 ;         % J/(mol-K)
 enthalpyCritWmol= 37548.5;          % J/mol
 entropyCritWmol = 79.3933;          % J/(mol-K)
@@ -18,7 +18,7 @@ entropyCritWmol = 79.3933;          % J/(mol-K)
 % Triple point of pure water
 TTripW = 273.16;        % K
 pTripW = 611.657;       % Pa
-densTripW = 999.789 ;   % kg/m�
+densTripW = 999.789 ;   % kg/m³
 
 % Molar mass
 M_W    = 0.018015268; % kg/mol
@@ -63,3 +63,29 @@ aTab8=[1.53091 -4.52564 698.302 -21666.4 -1475.33 0.0847012 -6.59523 ...
         -0.00165228 0.00122966];
 
 
+%Copyright 2017 Martin Mittermaier
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%
+%    Dieses Programm ist Freie Software: Sie können es unter den Bedingungen
+%    der GNU General Public License, wie von der Free Software Foundation,
+%    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder neueren
+%    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+%
+%    Dieses Programm wird in der Hoffnung, dass es nützlich sein wird, aber
+%    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+%    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+%    Siehe die GNU General Public License für weitere Details.
+%
+%    Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
+%    Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
