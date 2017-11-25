@@ -18,6 +18,8 @@ Please cite this article as:
     Print ISSN 0947-7411 
     Online ISSN 1432-1181 
 
+To start the simulation please execute the file hmt_main.m
+
 Contact: mittermaier.martin@gmail.com
 
 Thank you for your understanding. 
