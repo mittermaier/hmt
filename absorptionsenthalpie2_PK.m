@@ -30,7 +30,7 @@ hv = enthalpySatVapTW(temp);
 absorptionsenthalpie2 = hv - (h + konz.*h_grad);
 
 
-end;
+end
 
 %Copyright 2017 Martin Mittermaier
 %    This program is free software: you can redistribute it and/or modify
