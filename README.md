@@ -20,7 +20,7 @@ Please cite this article as:
 
 To start the simulation please execute the file hmt_main.m
 
-Contact: mittermaier.martin@gmail.com
+Contact: mittermaier3000@gmail.com
 
 Thank you for your understanding. 
 
